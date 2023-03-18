@@ -19,11 +19,6 @@ function getForecast() {
     var url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m&start_date=${startDate}&end_date=${endDate}`
     var forecastDiv = document.getElementById("forecast")
 
-
-    function mouseOut1() {
-        
-    }
-
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
