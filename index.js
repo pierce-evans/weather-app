@@ -7,6 +7,9 @@ function mouseOut() {
     const infoLabelElement = document.getElementById("infoLabel")
     infoLabelElement.innerHTML = ""
 }
+function mouseOver1() {
+    
+}
 
 function getForecast() {
     var latitude = (39.77)
