@@ -13,6 +13,10 @@ function mouseOver1() {
      Relative Humidity: ${data.hourly.relativehumidity_2m[i]}%<br>
      Wind Speed: ${data.hourly.windspeed_10m[i]}mph</div>`
 }
+function mouseOut1() {
+    const forecastMessageElement = document.getElementById("forecastInfo")
+    forecastMessageElement.innerHTML = ""
+}
 
 
 function getForecast() {
@@ -54,6 +58,8 @@ const buttonElement = document.getElementById("buttonId")
 buttonElement.addEventListener("click", getForecast)
 buttonElement.addEventListener("mouseover", mouseOver)
 buttonElement.addEventListener("mouseout", mouseOut)
+forecastMessageElement.addEventListener("mouseover", mouseOver1)
+forecastMessageElement.addEventListener("mouseout", mouseOut1)
 
 
 //mouseOver()
