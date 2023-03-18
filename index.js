@@ -23,7 +23,7 @@ function getForecast() {
 
 
             console.log(data.current_weather)
-            console.log(data.hourly.time)
+            console.log(data.hourly)
             forecastDiv.innerHTML = `<div class = "currentWeatherTemp"> Current Temp: ${Math.floor(data.current_weather.temperature) * 1.8 + 32}<sup>o</sup> F </div>`
             data.hourly.time.forEach((element,i) => {
                 if (
