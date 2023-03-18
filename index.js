@@ -21,9 +21,7 @@ function getForecast() {
 
     function mouseOver1() {
         const forecastMessageElement = document.getElementById("forecastInfo")
-        forecastMessageElement.innerHTML = `Temperature: ${celciusTemp}<sup>o</sup> F <br>
-         Relative Humidity: ${data.hourly.relativehumidity_2m[i]}%<br>
-         Wind Speed: ${data.hourly.windspeed_10m[i]}mph</div>`
+        forecastMessageElement.innerHTML =
     }
 
     function mouseOut1() {
@@ -47,7 +45,10 @@ function getForecast() {
                     const mainDiv = document.createElement("div")
                     var celciusTemp = Math.floor(data.hourly.temperature_2m[i] * 1.8 + 32)
 
-                    var msgString = `<div class="temps">Hour ${i}:<br>`
+                    var msgString = `<div class="temps">Hour ${i}:<br>
+                    Temperature: ${celciusTemp}<sup>o</sup> F <br>
+                    Relative Humidity: ${data.hourly.relativehumidity_2m[i]}%<br>
+                    Wind Speed: ${data.hourly.windspeed_10m[i]}mph</div>`
 
                     mainDiv.innerHTML = msgString
                     forecastDiv.appendChild(mainDiv);
