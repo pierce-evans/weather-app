@@ -20,8 +20,7 @@ function getForecast() {
     var forecastDiv = document.getElementById("forecast")
 
     function mouseOver1() {
-        const forecastMessageElement = document.getElementById("forecastInfo")
-        forecastMessageElement.innerHTML =
+        
     }
 
     function mouseOut1() {
