@@ -24,7 +24,7 @@ function getForecast() {
 
             //console.log(data.current_weather.temperature)
             console.log(data.hourly.time)*/
-            forecastDiv.innerHTML = `<div class = "currentWeatherTemp"> Current Temp: ${data.current_weather.temperature * 1.8 + 32}<sup>o</sup> F </div>`
+            forecastDiv.innerHTML = `<div class = "currentWeatherTemp"> Current Temp: ${Math.floor(data.current_weather.temperature) * 1.8 + 32}<sup>o</sup> F </div>`
             data.hourly.time.forEach((element,i) => {
                 if (
                     new Date() < new Date(data.hourly.time[i]) &&
