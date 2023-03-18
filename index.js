@@ -62,7 +62,7 @@ buttonElement.addEventListener("click", getForecast)
 buttonElement.addEventListener("mouseover", mouseOver)
 buttonElement.addEventListener("mouseout", mouseOut)
 forecastMessageElement.addEventListener("mouseover", mouseOver1)
-forecastMessageElement.addEventListener("mouseout", mouseOut1)
+
 
 
 //mouseOver()
