@@ -8,8 +8,6 @@ function mouseOut() {
     infoLabelElement.innerHTML = ""
 }
 
-
-
 function getForecast() {
     var latitude = (39.77)
     var longitude = (-86.16)
