@@ -21,8 +21,7 @@ function getForecast() {
 
 
     function mouseOut1() {
-        const forecastMessageElement = document.getElementById("forecastInfo")
-        forecastMessageElement.innerHTML = ""
+        
     }
 
     fetch(url)
