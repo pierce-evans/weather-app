@@ -7,16 +7,7 @@ function mouseOut() {
     const infoLabelElement = document.getElementById("infoLabel")
     infoLabelElement.innerHTML = ""
 }
-function mouseOver1() {
-    const forecastMessageElement = document.getElementById("forecastInfo")
-    forecastMessageElement.innerHTML = `Temperature: ${celciusTemp}<sup>o</sup> F <br>
-     Relative Humidity: ${data.hourly.relativehumidity_2m[i]}%<br>
-     Wind Speed: ${data.hourly.windspeed_10m[i]}mph</div>`
-}
-function mouseOut1() {
-    const forecastMessageElement = document.getElementById("forecastInfo")
-    forecastMessageElement.innerHTML = ""
-}
+
 
 
 function getForecast() {
@@ -28,6 +19,17 @@ function getForecast() {
     var url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m&start_date=${startDate}&end_date=${endDate}`
     var forecastDiv = document.getElementById("forecast")
 
+    function mouseOver1() {
+        const forecastMessageElement = document.getElementById("forecastInfo")
+        forecastMessageElement.innerHTML = `Temperature: ${celciusTemp}<sup>o</sup> F <br>
+         Relative Humidity: ${data.hourly.relativehumidity_2m[i]}%<br>
+         Wind Speed: ${data.hourly.windspeed_10m[i]}mph</div>`
+    }
+
+    function mouseOut1() {
+        const forecastMessageElement = document.getElementById("forecastInfo")
+        forecastMessageElement.innerHTML = ""
+    }
 
     fetch(url)
         .then((response) => response.json())
